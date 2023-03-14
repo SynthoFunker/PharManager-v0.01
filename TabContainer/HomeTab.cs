@@ -57,7 +57,7 @@ namespace PharManager_v0._01.TabContainer
         private void HomeTab_Load(object sender, EventArgs e)
         {
             Crud.sql = "SELECT Drug_name, Drug_Barcode, Drug_Expiry_Date FROM Drug_Storage WHERE (((Drug_Expiry_Date)>=Date()-365 And (Drug_Expiry_Date)<=Date()+7)) ORDER BY Drug_Expiry_Date ASC;";
-            Crud.cmd = new OleDbCommand(Crud.sql,Crud.con);   
+            Crud.cmd = new OleDbCommand(Crud.sql, Crud.con);
             dataGridView1.DataSource = Crud.CRUDoperation(Crud.cmd);
             dataGridView1.BackgroundColor = Color.White;
 
@@ -67,14 +67,32 @@ namespace PharManager_v0._01.TabContainer
             OleDbDataReader re = Crud.cmd.ExecuteReader();
             while (re.Read())
             {
-                QuantityChart.Series["Quantity"].Points.AddXY(re["Drug_name"].ToString(), re["Drug_Quantity"].ToString());
-                if ((int)re["Drug_Quantity"] < 5)
+                QuantityChart.Series["Quantity"].Points.AddXY(re["Drug_name"].ToString(), re["Drug_Quantity"].ToString());                              
+            }
+
+            using (OleDbDataAdapter adap = new OleDbDataAdapter(Crud.sql, Crud.con))
+            {
+                DataTable dt = new DataTable();
+                adap.Fill(dt);
+
+               
+                for (int i = 0; i < QuantityChart.Series["Quantity"].Points.Count; i++)
                 {
-                    QuantityChart.Series["Quantity"].Points[0].Color = Color.Red;
-                }
-                else
-                {
-                    QuantityChart.Series["Quantity"].Points[0].Color = Color.Black;
+                    int quantity = (int)dt.Rows[i]["Drug_Quantity"];
+                    Color color = Color.Green;
+                    if (quantity <= 3)
+                    {
+                        color = Color.Red;
+                    }
+                    else if (quantity <= 5)
+                    {
+                        color = Color.Orange;
+                    }
+                    else if (quantity <= 10)
+                    {
+                        color = Color.Yellow;
+                    }
+                    QuantityChart.Series["Quantity"].Points[i].Color = color;
                 }
             }
             Crud.con.Close();

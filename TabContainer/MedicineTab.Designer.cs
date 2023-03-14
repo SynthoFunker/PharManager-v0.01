@@ -48,7 +48,7 @@
             this.StorageTable.RowHeadersVisible = false;
             this.StorageTable.RowHeadersWidth = 51;
             this.StorageTable.RowTemplate.Height = 26;
-            this.StorageTable.Size = new System.Drawing.Size(888, 501);
+            this.StorageTable.Size = new System.Drawing.Size(1868, 1047);
             this.StorageTable.TabIndex = 0;
             this.StorageTable.VirtualMode = true;
             this.StorageTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StorageTable_CellContentClick);
@@ -60,7 +60,7 @@
             this.Controls.Add(this.StorageTable);
             this.DoubleBuffered = true;
             this.Name = "MedicineTab";
-            this.Size = new System.Drawing.Size(888, 501);
+            this.Size = new System.Drawing.Size(1868, 1047);
             this.Load += new System.EventHandler(this.MedicineTab_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StorageTable)).EndInit();
             this.ResumeLayout(false);

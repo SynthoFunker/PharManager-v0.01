@@ -181,10 +181,17 @@
             // QuantityChart
             // 
             this.QuantityChart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.QuantityChart.BackColor = System.Drawing.Color.Transparent;
+            chartArea3.AlignmentOrientation = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.None;
+            chartArea3.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.PlotPosition;
+            chartArea3.Area3DStyle.Enable3D = true;
+            chartArea3.Area3DStyle.Inclination = 50;
+            chartArea3.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
             chartArea3.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
             chartArea3.AxisX.LineColor = System.Drawing.Color.IndianRed;
             chartArea3.Name = "ChartArea1";
             this.QuantityChart.ChartAreas.Add(chartArea3);
+            legend3.BackColor = System.Drawing.Color.Transparent;
             legend3.Name = "Legend1";
             this.QuantityChart.Legends.Add(legend3);
             this.QuantityChart.Location = new System.Drawing.Point(1064, 573);

@@ -96,7 +96,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Bkbtn);
             this.Name = "BackupTab";
-            this.Size = new System.Drawing.Size(888, 501);
+            this.Size = new System.Drawing.Size(1868, 1047);
             this.ResumeLayout(false);
             this.PerformLayout();
 

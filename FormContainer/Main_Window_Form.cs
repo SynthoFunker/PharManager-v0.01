@@ -187,30 +187,33 @@ namespace PharManager_v0._01
             }
         }
 
-        private void homebtn_MouseHover(object sender, EventArgs e)
-        {
-            sidebar.Width = 170;
-            IsCollapsed = true;
-            button8_MouseHover(sender, e);
-        }
 
-        private void sidebar_MouseLeave(object sender, EventArgs e)
+        private void Collapsing_MouseLeave(object sender, EventArgs e)
         {
             Point mpos = sidebar.PointToClient(Control.MousePosition);
             if (!sidebar.ClientRectangle.Contains(mpos))
             {
                 sidebar.Width = 52;
+                IsCollapsed = true;
                 sidebar.Refresh();
             }
         }
 
-        private void button8_MouseHover(object sender, EventArgs e)
+        private void Buttons_Expanding_MouseHover(object sender, EventArgs e)
         {
+            IsCollapsed = false;
             if (!IsCollapsed)
             {
-                sidebar.Width = 130;
+                sidebar.Width = 130;                
                 sidebar.Refresh();
             }
+        }
+
+        private void Expanding_MouseHover(object sender, EventArgs e)
+        {
+            sidebar.Width = 130;
+            IsCollapsed = false;
+            Buttons_Expanding_MouseHover(sender, e);
         }
     }
 }

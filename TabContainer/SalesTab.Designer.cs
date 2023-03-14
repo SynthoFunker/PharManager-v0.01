@@ -60,7 +60,7 @@
             this.Controls.Add(this.dataGridView1);
             this.DoubleBuffered = true;
             this.Name = "SalesTab";
-            this.Size = new System.Drawing.Size(895, 501);
+            this.Size = new System.Drawing.Size(1868, 1047);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

@@ -121,8 +121,8 @@
             this.sidebar.Controls.Add(this.button7);
             this.sidebar.Controls.Add(this.button8);
             this.sidebar.Name = "sidebar";
-            this.sidebar.MouseLeave += new System.EventHandler(this.sidebar_MouseLeave);
-            this.sidebar.MouseHover += new System.EventHandler(this.button8_MouseHover);
+            this.sidebar.MouseLeave += new System.EventHandler(this.Collapsing_MouseLeave);
+            this.sidebar.MouseHover += new System.EventHandler(this.Expanding_MouseHover);
             // 
             // button1
             // 
@@ -135,8 +135,8 @@
             this.button1.Name = "button1";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Homebtn_Click);
-            this.button1.MouseLeave += new System.EventHandler(this.sidebar_MouseLeave);
-            this.button1.MouseHover += new System.EventHandler(this.button8_MouseHover);
+            this.button1.MouseLeave += new System.EventHandler(this.Collapsing_MouseLeave);
+            this.button1.MouseHover += new System.EventHandler(this.Buttons_Expanding_MouseHover);
             // 
             // button3
             // 
@@ -149,8 +149,8 @@
             this.button3.Name = "button3";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.Medicinebtn_Click);
-            this.button3.MouseLeave += new System.EventHandler(this.sidebar_MouseLeave);
-            this.button3.MouseHover += new System.EventHandler(this.button8_MouseHover);
+            this.button3.MouseLeave += new System.EventHandler(this.Collapsing_MouseLeave);
+            this.button3.MouseHover += new System.EventHandler(this.Buttons_Expanding_MouseHover);
             // 
             // button4
             // 
@@ -163,8 +163,8 @@
             this.button4.Name = "button4";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.Salesbtn_Click);
-            this.button4.MouseLeave += new System.EventHandler(this.sidebar_MouseLeave);
-            this.button4.MouseHover += new System.EventHandler(this.button8_MouseHover);
+            this.button4.MouseLeave += new System.EventHandler(this.Collapsing_MouseLeave);
+            this.button4.MouseHover += new System.EventHandler(this.Buttons_Expanding_MouseHover);
             // 
             // button5
             // 
@@ -176,8 +176,8 @@
             this.button5.ImageList = this.MainIcons;
             this.button5.Name = "button5";
             this.button5.UseVisualStyleBackColor = false;
-            this.button5.MouseLeave += new System.EventHandler(this.sidebar_MouseLeave);
-            this.button5.MouseHover += new System.EventHandler(this.button8_MouseHover);
+            this.button5.MouseLeave += new System.EventHandler(this.Collapsing_MouseLeave);
+            this.button5.MouseHover += new System.EventHandler(this.Buttons_Expanding_MouseHover);
             // 
             // button6
             // 
@@ -190,8 +190,8 @@
             this.button6.Name = "button6";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.Backupbtn_Click);
-            this.button6.MouseLeave += new System.EventHandler(this.sidebar_MouseLeave);
-            this.button6.MouseHover += new System.EventHandler(this.button8_MouseHover);
+            this.button6.MouseLeave += new System.EventHandler(this.Collapsing_MouseLeave);
+            this.button6.MouseHover += new System.EventHandler(this.Buttons_Expanding_MouseHover);
             // 
             // button7
             // 
@@ -204,8 +204,8 @@
             this.button7.Name = "button7";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.Settingsbtn_Click);
-            this.button7.MouseLeave += new System.EventHandler(this.sidebar_MouseLeave);
-            this.button7.MouseHover += new System.EventHandler(this.button8_MouseHover);
+            this.button7.MouseLeave += new System.EventHandler(this.Collapsing_MouseLeave);
+            this.button7.MouseHover += new System.EventHandler(this.Buttons_Expanding_MouseHover);
             // 
             // button8
             // 
@@ -218,8 +218,8 @@
             this.button8.Name = "button8";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.Logoutbtn_Click);
-            this.button8.MouseLeave += new System.EventHandler(this.sidebar_MouseLeave);
-            this.button8.MouseHover += new System.EventHandler(this.button8_MouseHover);
+            this.button8.MouseLeave += new System.EventHandler(this.Collapsing_MouseLeave);
+            this.button8.MouseHover += new System.EventHandler(this.Buttons_Expanding_MouseHover);
             // 
             // Main_Window_Form
             // 
