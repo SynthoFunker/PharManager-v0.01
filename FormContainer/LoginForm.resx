@@ -117,26 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="groupBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="fpass.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="fpass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>108, 103</value>
+    <value>56, 108</value>
   </data>
   <data name="fpass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 17</value>
+    <value>196, 17</value>
   </data>
   <data name="fpass.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="fpass.Text" xml:space="preserve">
-    <value>Forgot your Password?</value>
+    <value>ئایا وشەی نهێنیت لە بیر کردووە؟</value>
   </data>
   <data name="&gt;&gt;fpass.Name" xml:space="preserve">
     <value>fpass</value>
@@ -153,6 +149,7 @@
   <data name="loginbtn.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="loginbtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -163,7 +160,7 @@
     <value>NoControl</value>
   </data>
   <data name="loginbtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 134</value>
+    <value>105, 138</value>
   </data>
   <data name="loginbtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 48</value>
@@ -172,7 +169,7 @@
     <value>4</value>
   </data>
   <data name="loginbtn.Text" xml:space="preserve">
-    <value>Login</value>
+    <value>داخڵبوون</value>
   </data>
   <data name="&gt;&gt;loginbtn.Name" xml:space="preserve">
     <value>loginbtn</value>
@@ -187,13 +184,13 @@
     <value>1</value>
   </data>
   <data name="passBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 70</value>
+    <value>148, 74</value>
   </data>
   <data name="passBox.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
     <value>*</value>
   </data>
   <data name="passBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 24</value>
+    <value>118, 24</value>
   </data>
   <data name="passBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -211,10 +208,10 @@
     <value>2</value>
   </data>
   <data name="EorUBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 39</value>
+    <value>148, 43</value>
   </data>
   <data name="EorUBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 24</value>
+    <value>118, 24</value>
   </data>
   <data name="EorUBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -235,16 +232,16 @@
     <value>True</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>77, 73</value>
+    <value>55, 77</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 17</value>
+    <value>87, 17</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Password</value>
+    <value>وشەی نهێنی</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
@@ -262,16 +259,16 @@
     <value>True</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>77, 42</value>
+    <value>55, 46</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 17</value>
+    <value>87, 17</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Username or Email</value>
+    <value>ناو یان ئیمەیڵ</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -286,16 +283,16 @@
     <value>5</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 67</value>
+    <value>18, 12</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>380, 215</value>
+    <value>352, 216</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="groupBox1.Text" xml:space="preserve">
-    <value>Login</value>
+    <value>داخڵبوون</value>
   </data>
   <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
     <value>groupBox1</value>
@@ -316,7 +313,7 @@
     <value>7, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>533, 348</value>
+    <value>384, 240</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

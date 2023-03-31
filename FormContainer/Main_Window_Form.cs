@@ -13,14 +13,17 @@ namespace PharManager_v0._01
         private readonly LoginForm _f1;
         private readonly RegisterForm _f2;
         private readonly ChangePassword_Form _f3;
+       
+        
 
         #region Constructors
 
         public Main_Window_Form()
         {
             InitializeComponent();
-            HomeTab op = new HomeTab();
-            AddUserControl(op);
+            SalesTab op = new SalesTab();
+            AddUserControl(op);          
+           
         }
 
         public Main_Window_Form(LoginForm f1_)
@@ -71,15 +74,8 @@ namespace PharManager_v0._01
 
         private void Minbtn_Click(object sender, EventArgs e)
         {
-            if (this.WindowState == FormWindowState.Normal)
-            {
-                this.WindowState = FormWindowState.Minimized;
-            }
-            else if (this.WindowState == FormWindowState.Minimized)
-            {
-                this.WindowState = FormWindowState.Normal;
-            }
-            else if (this.WindowState == FormWindowState.Maximized)
+
+            if (this.WindowState == FormWindowState.Maximized)
             {
                 this.WindowState = FormWindowState.Minimized;
             }
@@ -87,10 +83,6 @@ namespace PharManager_v0._01
             {
                 this.WindowState = FormWindowState.Maximized;
             }
-        }
-
-        private void Iconbtn_Click(object sender, EventArgs e)
-        {
         }
 
         private void Homebtn_Click(object sender, EventArgs e)
@@ -141,15 +133,6 @@ namespace PharManager_v0._01
             this.WindowState = FormWindowState.Maximized;
         }
 
-        private void PanelHeader_MouseDown(object sender, MouseEventArgs e)
-        {
-        }
-
-        private void Main_Window_Form_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        #endregion Events
 
         private void Med_Name_Enter(object sender, EventArgs e)
         {
@@ -187,33 +170,35 @@ namespace PharManager_v0._01
             }
         }
 
-
-        private void Collapsing_MouseLeave(object sender, EventArgs e)
+        private void menuStrip1_MouseLeave(object sender, EventArgs e)
         {
-            Point mpos = sidebar.PointToClient(Control.MousePosition);
-            if (!sidebar.ClientRectangle.Contains(mpos))
+            Point mpos = menuStrip1.PointToClient(Control.MousePosition);
+            if (!menuStrip1.ClientRectangle.Contains(mpos))
             {
-                sidebar.Width = 52;
+                menuStrip1.Width = menuStrip1.MinimumSize.Width;
                 IsCollapsed = true;
-                sidebar.Refresh();
+                menuStrip1.Refresh();
             }
         }
 
-        private void Buttons_Expanding_MouseHover(object sender, EventArgs e)
+        private void menuStrip1_MouseHover(object sender, EventArgs e)
         {
-            IsCollapsed = false;
-            if (!IsCollapsed)
+          side_animation_open.Start();
+        }
+
+        private void side_animation_Tick(object sender, EventArgs e)
+        {
+            menuStrip1.Width += 10;
+
+            if (menuStrip1.Width == menuStrip1.MaximumSize.Width)
             {
-                sidebar.Width = 130;                
-                sidebar.Refresh();
-            }
-        }
-
-        private void Expanding_MouseHover(object sender, EventArgs e)
-        {
-            sidebar.Width = 130;
             IsCollapsed = false;
-            Buttons_Expanding_MouseHover(sender, e);
+             side_animation_open.Stop();
+            }
+
         }
+        #endregion Events
+
+  
     }
 }

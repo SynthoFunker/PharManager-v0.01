@@ -52,5 +52,23 @@ namespace PharManager_v0._01.TabContainer
                 MessageBox.Show($"Error{ex}");
             }
         }
+
+        private void minbtn_Click(object sender, EventArgs e)
+        {
+            Main_Window_Form m = new Main_Window_Form();
+            if (m.WindowState == FormWindowState.Maximized)
+            {
+                m.WindowState = FormWindowState.Minimized;
+            }
+            else if (m.WindowState == FormWindowState.Minimized)
+            {
+                m.WindowState = FormWindowState.Maximized;
+            }
+        }
+
+        private void closebtn_Click(object sender, EventArgs e)
+        {
+         Application.Exit();
+        }
     }
 }

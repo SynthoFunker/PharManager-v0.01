@@ -14,88 +14,60 @@ namespace PharManager_v0._01.TabContainer
         }
 
         private string id = string.Empty;
-        private int row = 0;
-        private void LoadData(string keyword)
-        {
-            Crud.sql = "select * from Drug_Storage";
 
-            string strkeyword = string.Format("%{0}%", Crud.con);
-
-            Crud.cmd = new OleDbCommand(Crud.sql, Crud.con);
-
-            Crud.cmd.Parameters.Clear();
-            Crud.cmd.Parameters.AddWithValue("Keyword1", strkeyword);
-            Crud.cmd.Parameters.AddWithValue("Keyword2", keyword);
-
-            DataTable dt = Crud.CRUDoperation(Crud.cmd);
-
-            if (dt.Rows.Count > 0)
-            {
-                row = Convert.ToInt32(dt.Rows.Count.ToString());
-            }
-            else
-            {
-                row = 0;
-            }
-        }
-        private void execute(string mysql, string param)
-        {
-            Crud.cmd = new OleDbCommand(mysql, Crud.con);
-            AddParameters(param);
-            Crud.CRUDoperation(Crud.cmd);
-        }
-        private void AddParameters(string str)
-        {
-            Crud.cmd.Parameters.Clear();
-            if (str == "Delete")
-            {
-
-            }
-        }
 
 
         private void HomeTab_Load(object sender, EventArgs e)
         {
-            Crud.sql = "SELECT Drug_name, Drug_Barcode, Drug_Expiry_Date FROM Drug_Storage WHERE (((Drug_Expiry_Date)>=Date()-365 And (Drug_Expiry_Date)<=Date()+7)) ORDER BY Drug_Expiry_Date ASC;";
-            Crud.cmd = new OleDbCommand(Crud.sql, Crud.con);
-            dataGridView1.DataSource = Crud.CRUDoperation(Crud.cmd);
-            dataGridView1.BackgroundColor = Color.White;
-
-            Crud.sql = "SELECT * FROM Drug_Storage order by Drug_Quantity desc";
-            Crud.cmd = new OleDbCommand(Crud.sql, Crud.con);
-            Crud.con.Open();
-            OleDbDataReader re = Crud.cmd.ExecuteReader();
-            while (re.Read())
+            using (OleDbConnection con = new OleDbConnection($"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={Application.StartupPath}\\Pharmacy Database.accdb;Persist Security Info=True;"))
             {
-                QuantityChart.Series["Quantity"].Points.AddXY(re["Drug_name"].ToString(), re["Drug_Quantity"].ToString());                              
-            }
-
-            using (OleDbDataAdapter adap = new OleDbDataAdapter(Crud.sql, Crud.con))
-            {
-                DataTable dt = new DataTable();
-                adap.Fill(dt);
-
-               
-                for (int i = 0; i < QuantityChart.Series["Quantity"].Points.Count; i++)
+                using (OleDbDataAdapter sda = new OleDbDataAdapter("SELECT Drug_name, Drug_Barcode, Drug_Expiry_Date FROM Drug_Storage WHERE (((Drug_Expiry_Date)>=Date()-365 And (Drug_Expiry_Date)<Date()+7)) ORDER BY Drug_Expiry_Date ASC;", con))
                 {
-                    int quantity = (int)dt.Rows[i]["Drug_Quantity"];
-                    Color color = Color.Green;
-                    if (quantity <= 3)
+                    using (DataTable dt = new DataTable())
                     {
-                        color = Color.Red;
+                        sda.Fill(dt);
+                        dataGridView1.DataSource = dt;
+                        dataGridView1.Update();
+                        dataGridView1.Refresh();
+                        dataGridView1.BackgroundColor = Color.White;
                     }
-                    else if (quantity <= 5)
+                }
+                using (OleDbCommand cmd = new OleDbCommand("SELECT * FROM Drug_Storage order by Drug_Quantity desc", con))
+                {
+                    con.Open();
+                    OleDbDataReader re = cmd.ExecuteReader();
+                    while (re.Read())
                     {
-                        color = Color.Orange;
+                        QuantityChart.Series["Quantity"].Points.AddXY(re["Drug_name"].ToString(), re["Drug_Quantity"].ToString());
                     }
-                    else if (quantity <= 10)
+                    con.Close();
+                }
+                using (OleDbDataAdapter adap = new OleDbDataAdapter("SELECT * FROM Drug_Storage order by Drug_Quantity desc", con))
+                {
+                    con.Open();
+                    DataTable dt = new DataTable();
+                    adap.Fill(dt);
+                    for (int i = 0; i < QuantityChart.Series["Quantity"].Points.Count; i++)
                     {
-                        color = Color.Yellow;
+                        int quantity = (int)dt.Rows[i]["Drug_Quantity"];
+                        Color color = Color.Green;
+                        if (quantity <= 3)
+                        {
+                            color = Color.Red;
+                        }
+                        else if (quantity <= 5)
+                        {
+                            color = Color.Orange;
+                        }
+                        else if (quantity <= 10)
+                        {
+                            color = Color.Yellow;
+                        }
+                        QuantityChart.Series["Quantity"].Points[i].Color = color;
                     }
-                    QuantityChart.Series["Quantity"].Points[i].Color = color;
+            con.Close();
                 }
             }
-            Crud.con.Close();
         }
         private void CheckMedicineAmounts(DataTable dt)
         {
@@ -118,19 +90,38 @@ namespace PharManager_v0._01.TabContainer
                 using (OleDbCommand cmd = new OleDbCommand("Select Drug_name, Drug_Barcode, Drug_Expiry_Date from Drug_Storage"))
                 using (OleDbDataAdapter ad = new OleDbDataAdapter(cmd))
                 {
-                    DateTime expd = new DateTime();
 
                     foreach (DataGridViewRow row in dataGridView1.Rows)
                     {
-                        expd = Convert.ToDateTime(row.Cells["Drug_Expiry_Date"].Value);
-                        if (expd < DateTime.Today) { row.DefaultCellStyle.BackColor = Color.Red; }
-                        else if (expd < DateTime.Today.AddDays(3)) { row.DefaultCellStyle.BackColor = Color.Orange; }
-                        else if (expd < DateTime.Today.AddDays(7)) { row.DefaultCellStyle.BackColor = Color.Yellow; }
+                        DateTime expd = Convert.ToDateTime(row.Cells["Drug_Expiry_Date"].Value);
+                        if (expd <= DateTime.Today) { row.DefaultCellStyle.BackColor = Color.Red; }
+                        else if (expd <= DateTime.Today.AddDays(3)) { row.DefaultCellStyle.BackColor = Color.Orange; }
+                        else if (expd <= DateTime.Today.AddDays(7)) { row.DefaultCellStyle.BackColor = Color.Yellow; }
                         else { row.DefaultCellStyle.BackColor = Color.Green; }
                     }
                 }
             }
         }
+
+        private void minbtn_Click(object sender, EventArgs e)
+        {
+            Main_Window_Form m = new Main_Window_Form();
+            if (m.WindowState == FormWindowState.Maximized)
+            {
+                m.WindowState = FormWindowState.Minimized;
+            }
+            else if (m.WindowState == FormWindowState.Minimized)
+            {
+                m.WindowState = FormWindowState.Maximized;
+            }
+        }
+
+        private void closebtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();          
+        }
+
+
     }
 }
 

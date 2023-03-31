@@ -28,11 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BackupTab));
             this.Bkbtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.rsbtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.closebtn = new System.Windows.Forms.PictureBox();
+            this.minbtn = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.closebtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minbtn)).BeginInit();
             this.SuspendLayout();
             // 
             // Bkbtn
@@ -86,10 +91,38 @@
             this.button1.Text = "Restore";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // closebtn
+            // 
+            this.closebtn.BackColor = System.Drawing.Color.Transparent;
+            this.closebtn.Image = ((System.Drawing.Image)(resources.GetObject("closebtn.Image")));
+            this.closebtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.closebtn.Location = new System.Drawing.Point(1835, 0);
+            this.closebtn.Margin = new System.Windows.Forms.Padding(0);
+            this.closebtn.Name = "closebtn";
+            this.closebtn.Size = new System.Drawing.Size(33, 33);
+            this.closebtn.TabIndex = 5;
+            this.closebtn.TabStop = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
+            // 
+            // minbtn
+            // 
+            this.minbtn.BackColor = System.Drawing.Color.Transparent;
+            this.minbtn.Image = ((System.Drawing.Image)(resources.GetObject("minbtn.Image")));
+            this.minbtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.minbtn.Location = new System.Drawing.Point(1803, 0);
+            this.minbtn.Margin = new System.Windows.Forms.Padding(0);
+            this.minbtn.Name = "minbtn";
+            this.minbtn.Size = new System.Drawing.Size(32, 32);
+            this.minbtn.TabIndex = 6;
+            this.minbtn.TabStop = false;
+            this.minbtn.Click += new System.EventHandler(this.minbtn_Click);
+            // 
             // BackupTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.closebtn);
+            this.Controls.Add(this.minbtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.rsbtn);
@@ -97,6 +130,8 @@
             this.Controls.Add(this.Bkbtn);
             this.Name = "BackupTab";
             this.Size = new System.Drawing.Size(1868, 1047);
+            ((System.ComponentModel.ISupportInitialize)(this.closebtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minbtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,5 +144,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button rsbtn;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox closebtn;
+        private System.Windows.Forms.PictureBox minbtn;
     }
 }

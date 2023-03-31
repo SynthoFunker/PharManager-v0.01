@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PharManager_v0._01.TabContainer;
+using System;
 using System.Data.OleDb;
 using System.Windows.Forms;
 namespace PharManager_v0._01
@@ -13,11 +14,6 @@ namespace PharManager_v0._01
             con.ConnectionString = $"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={Application.StartupPath}\\Pharmacy Database.accdb;Persist Security Info=True;";
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void label1_Click_1(object sender, EventArgs e)
         {
@@ -29,17 +25,12 @@ namespace PharManager_v0._01
             MessageBox.Show("You ain't gonna be getting any passwords by clicking here...");
         }
 
-        private void Regbtn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            RegisterForm f = new RegisterForm();
-            f.ShowDialog();
-        }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
 
 
+            
             con.Open();
             OleDbCommand command = new OleDbCommand("Select * from Users where Username = @username or Email = @email and Password = @password", con);
             command.Connection = con;
@@ -52,23 +43,21 @@ namespace PharManager_v0._01
             while (reader.Read())
             {
                 count = count + 1;
-            }
+                if (count == 1) { SalesTab.user_ID = (int)reader["User_ID"]; userName = reader[3].ToString(); }
 
-            if (count == 1)
-            {
-                userName = EorUBox.Text;
-                con.Close();
-                con.Dispose();
-                this.Hide();
-                Main_Window_Form f2 = new Main_Window_Form(this);
-                f2.ShowDialog();
             }
-            else if (count > 1)
-            { MessageBox.Show("Duplicate Username & Password"); }
-            else
-            { MessageBox.Show("Username & Password is invalid " + count); }
-
-            con.Close();
+                if (count == 1)
+                {        
+                    con.Close();
+                    con.Dispose();
+                    this.Hide();
+                    Main_Window_Form f2 = new Main_Window_Form(this);               
+                    f2.ShowDialog();
+                }
+                else if (count > 1)
+                { MessageBox.Show("Duplicate Username & Password"); con.Close(); }
+                else
+                { MessageBox.Show($"Username & Password is invalid {count}"); con.Close(); }
         }
 
         private void fpass_Click(object sender, EventArgs e)

@@ -30,42 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Window_Form));
-            this.minbtn = new System.Windows.Forms.PictureBox();
-            this.closebtn = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.Med_Barcode = new System.Windows.Forms.TextBox();
             this.Med_Name = new System.Windows.Forms.TextBox();
             this.Tabcon = new System.Windows.Forms.Panel();
             this.MainIcons = new System.Windows.Forms.ImageList(this.components);
-            this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.minbtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closebtn)).BeginInit();
+            this.backupbtn = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.dashboardbtn = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.side_animation_open = new System.Windows.Forms.Timer(this.components);
             this.Tabcon.SuspendLayout();
-            this.sidebar.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // minbtn
-            // 
-            this.minbtn.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.minbtn, "minbtn");
-            this.minbtn.Name = "minbtn";
-            this.minbtn.TabStop = false;
-            this.minbtn.Click += new System.EventHandler(this.Minbtn_Click);
-            // 
-            // closebtn
-            // 
-            this.closebtn.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.closebtn, "closebtn");
-            this.closebtn.Name = "closebtn";
-            this.closebtn.TabStop = false;
-            this.closebtn.Click += new System.EventHandler(this.Closebtn_Click);
             // 
             // button2
             // 
@@ -92,7 +73,6 @@
             // Tabcon
             // 
             resources.ApplyResources(this.Tabcon, "Tabcon");
-            this.Tabcon.Controls.Add(this.minbtn);
             this.Tabcon.Controls.Add(this.button2);
             this.Tabcon.Controls.Add(this.Med_Barcode);
             this.Tabcon.Controls.Add(this.Med_Name);
@@ -110,154 +90,123 @@
             this.MainIcons.Images.SetKeyName(5, "icons8-logout-40.png");
             this.MainIcons.Images.SetKeyName(6, "icons8-home-page-40.png");
             // 
-            // sidebar
+            // backupbtn
             // 
-            resources.ApplyResources(this.sidebar, "sidebar");
-            this.sidebar.Controls.Add(this.button1);
-            this.sidebar.Controls.Add(this.button3);
-            this.sidebar.Controls.Add(this.button4);
-            this.sidebar.Controls.Add(this.button5);
-            this.sidebar.Controls.Add(this.button6);
-            this.sidebar.Controls.Add(this.button7);
-            this.sidebar.Controls.Add(this.button8);
-            this.sidebar.Name = "sidebar";
-            this.sidebar.MouseLeave += new System.EventHandler(this.Collapsing_MouseLeave);
-            this.sidebar.MouseHover += new System.EventHandler(this.Expanding_MouseHover);
+            resources.ApplyResources(this.backupbtn, "backupbtn");
+            this.backupbtn.Image = global::PharManager_v0._01.Properties.Resources.icons8_data_backup_40;
+            this.backupbtn.Name = "backupbtn";
+            this.backupbtn.Padding = new System.Windows.Forms.Padding(5, 0, 5, 35);
+            this.backupbtn.Click += new System.EventHandler(this.Backupbtn_Click);
             // 
-            // button1
+            // menuStrip1
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(199)))), ((int)(((byte)(230)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(219)))), ((int)(((byte)(250)))));
-            this.button1.ImageList = this.MainIcons;
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Homebtn_Click);
-            this.button1.MouseLeave += new System.EventHandler(this.Collapsing_MouseLeave);
-            this.button1.MouseHover += new System.EventHandler(this.Buttons_Expanding_MouseHover);
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(10, 10);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dashboardbtn,
+            this.toolStripMenuItem2,
+            this.toolStripMenuItem3,
+            this.toolStripMenuItem4,
+            this.backupbtn,
+            this.toolStripMenuItem5,
+            this.toolStripMenuItem6});
+            this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.menuStrip1.MouseLeave += new System.EventHandler(this.menuStrip1_MouseLeave);
+            this.menuStrip1.MouseHover += new System.EventHandler(this.menuStrip1_MouseHover);
             // 
-            // button3
+            // dashboardbtn
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.button3, "button3");
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(199)))), ((int)(((byte)(230)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(219)))), ((int)(((byte)(250)))));
-            this.button3.ImageList = this.MainIcons;
-            this.button3.Name = "button3";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.Medicinebtn_Click);
-            this.button3.MouseLeave += new System.EventHandler(this.Collapsing_MouseLeave);
-            this.button3.MouseHover += new System.EventHandler(this.Buttons_Expanding_MouseHover);
+            resources.ApplyResources(this.dashboardbtn, "dashboardbtn");
+            this.dashboardbtn.Image = global::PharManager_v0._01.Properties.Resources.icons8_home_page_40;
+            this.dashboardbtn.Name = "dashboardbtn";
+            this.dashboardbtn.Padding = new System.Windows.Forms.Padding(5, 0, 5, 35);
+            this.dashboardbtn.Click += new System.EventHandler(this.Homebtn_Click);
             // 
-            // button4
+            // toolStripMenuItem2
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.button4, "button4");
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(199)))), ((int)(((byte)(230)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(219)))), ((int)(((byte)(250)))));
-            this.button4.ImageList = this.MainIcons;
-            this.button4.Name = "button4";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.Salesbtn_Click);
-            this.button4.MouseLeave += new System.EventHandler(this.Collapsing_MouseLeave);
-            this.button4.MouseHover += new System.EventHandler(this.Buttons_Expanding_MouseHover);
+            resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
+            this.toolStripMenuItem2.BackColor = System.Drawing.Color.Transparent;
+            this.toolStripMenuItem2.Image = global::PharManager_v0._01.Properties.Resources.icons8_supplement_bottle_40;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Padding = new System.Windows.Forms.Padding(5, 0, 5, 35);
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.Medicinebtn_Click);
             // 
-            // button5
+            // toolStripMenuItem3
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.button5, "button5");
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(199)))), ((int)(((byte)(230)))));
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(219)))), ((int)(((byte)(250)))));
-            this.button5.ImageList = this.MainIcons;
-            this.button5.Name = "button5";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.MouseLeave += new System.EventHandler(this.Collapsing_MouseLeave);
-            this.button5.MouseHover += new System.EventHandler(this.Buttons_Expanding_MouseHover);
+            resources.ApplyResources(this.toolStripMenuItem3, "toolStripMenuItem3");
+            this.toolStripMenuItem3.Image = global::PharManager_v0._01.Properties.Resources.icons8_estimate_40;
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Padding = new System.Windows.Forms.Padding(5, 0, 5, 35);
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.Salesbtn_Click);
             // 
-            // button6
+            // toolStripMenuItem4
             // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.button6, "button6");
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(199)))), ((int)(((byte)(230)))));
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(219)))), ((int)(((byte)(250)))));
-            this.button6.ImageList = this.MainIcons;
-            this.button6.Name = "button6";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.Backupbtn_Click);
-            this.button6.MouseLeave += new System.EventHandler(this.Collapsing_MouseLeave);
-            this.button6.MouseHover += new System.EventHandler(this.Buttons_Expanding_MouseHover);
+            resources.ApplyResources(this.toolStripMenuItem4, "toolStripMenuItem4");
+            this.toolStripMenuItem4.Image = global::PharManager_v0._01.Properties.Resources.icons8_checkout_40;
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Padding = new System.Windows.Forms.Padding(5, 0, 5, 35);
             // 
-            // button7
+            // toolStripMenuItem5
             // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.button7, "button7");
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(199)))), ((int)(((byte)(230)))));
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(219)))), ((int)(((byte)(250)))));
-            this.button7.ImageList = this.MainIcons;
-            this.button7.Name = "button7";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.Settingsbtn_Click);
-            this.button7.MouseLeave += new System.EventHandler(this.Collapsing_MouseLeave);
-            this.button7.MouseHover += new System.EventHandler(this.Buttons_Expanding_MouseHover);
+            resources.ApplyResources(this.toolStripMenuItem5, "toolStripMenuItem5");
+            this.toolStripMenuItem5.Image = global::PharManager_v0._01.Properties.Resources.icons8_services_40;
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Padding = new System.Windows.Forms.Padding(5, 0, 5, 35);
+            this.toolStripMenuItem5.Click += new System.EventHandler(this.Settingsbtn_Click);
             // 
-            // button8
+            // toolStripMenuItem6
             // 
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.button8, "button8");
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(199)))), ((int)(((byte)(230)))));
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(219)))), ((int)(((byte)(250)))));
-            this.button8.ImageList = this.MainIcons;
-            this.button8.Name = "button8";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.Logoutbtn_Click);
-            this.button8.MouseLeave += new System.EventHandler(this.Collapsing_MouseLeave);
-            this.button8.MouseHover += new System.EventHandler(this.Buttons_Expanding_MouseHover);
+            resources.ApplyResources(this.toolStripMenuItem6, "toolStripMenuItem6");
+            this.toolStripMenuItem6.Image = global::PharManager_v0._01.Properties.Resources.icons8_logout_40;
+            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            this.toolStripMenuItem6.Padding = new System.Windows.Forms.Padding(5, 0, 5, 35);
+            this.toolStripMenuItem6.Click += new System.EventHandler(this.Logoutbtn_Click);
+            // 
+            // side_animation_open
+            // 
+            this.side_animation_open.Interval = 20;
+            this.side_animation_open.Tick += new System.EventHandler(this.side_animation_Tick);
             // 
             // Main_Window_Form
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
-            this.Controls.Add(this.closebtn);
             this.Controls.Add(this.Tabcon);
-            this.Controls.Add(this.sidebar);
+            this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IsMdiContainer = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Main_Window_Form";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form2_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Main_Window_Form_Paint);
-            ((System.ComponentModel.ISupportInitialize)(this.minbtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closebtn)).EndInit();
             this.Tabcon.ResumeLayout(false);
             this.Tabcon.PerformLayout();
-            this.sidebar.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox minbtn;
-        private System.Windows.Forms.PictureBox closebtn;
         private System.Windows.Forms.Panel Tabcon;
         private System.Windows.Forms.TextBox Med_Name;
         private System.Windows.Forms.TextBox Med_Barcode;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ImageList MainIcons;
-        private System.Windows.Forms.FlowLayoutPanel sidebar;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.ToolStripMenuItem backupbtn;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem dashboardbtn;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
+        private System.Windows.Forms.Timer side_animation_open;
     }
 }

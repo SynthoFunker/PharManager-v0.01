@@ -113,7 +113,6 @@
             this.Name = "ChangePassword_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateNewPassword";
-            this.Load += new System.EventHandler(this.ChangePassword_Form_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

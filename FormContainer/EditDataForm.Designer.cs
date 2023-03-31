@@ -43,12 +43,14 @@
             this.closebtn = new System.Windows.Forms.PictureBox();
             this.purchasedate = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
+            this.buybox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.closebtn)).BeginInit();
             this.SuspendLayout();
             // 
             // submit
             // 
-            this.submit.Location = new System.Drawing.Point(121, 345);
+            this.submit.Location = new System.Drawing.Point(121, 375);
             this.submit.Name = "submit";
             this.submit.Size = new System.Drawing.Size(80, 34);
             this.submit.TabIndex = 5;
@@ -90,7 +92,7 @@
             // 
             // qbox
             // 
-            this.qbox.Location = new System.Drawing.Point(41, 156);
+            this.qbox.Location = new System.Drawing.Point(41, 197);
             this.qbox.Name = "qbox";
             this.qbox.Size = new System.Drawing.Size(111, 24);
             this.qbox.TabIndex = 2;
@@ -98,7 +100,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(158, 159);
+            this.label3.Location = new System.Drawing.Point(158, 200);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(30, 17);
             this.label3.TabIndex = 5;
@@ -106,7 +108,7 @@
             // 
             // bbox
             // 
-            this.bbox.Location = new System.Drawing.Point(41, 197);
+            this.bbox.Location = new System.Drawing.Point(41, 238);
             this.bbox.Name = "bbox";
             this.bbox.Size = new System.Drawing.Size(111, 24);
             this.bbox.TabIndex = 3;
@@ -114,7 +116,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(158, 200);
+            this.label4.Location = new System.Drawing.Point(158, 241);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 17);
             this.label4.TabIndex = 7;
@@ -123,7 +125,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(158, 282);
+            this.label5.Location = new System.Drawing.Point(158, 323);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(124, 17);
             this.label5.TabIndex = 9;
@@ -133,7 +135,7 @@
             // 
             this.expirydate.CustomFormat = "d-M-yyyy";
             this.expirydate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.expirydate.Location = new System.Drawing.Point(41, 279);
+            this.expirydate.Location = new System.Drawing.Point(41, 320);
             this.expirydate.Name = "expirydate";
             this.expirydate.Size = new System.Drawing.Size(111, 24);
             this.expirydate.TabIndex = 10;
@@ -156,7 +158,7 @@
             // 
             this.purchasedate.CustomFormat = "d-M-yyyy";
             this.purchasedate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.purchasedate.Location = new System.Drawing.Point(41, 238);
+            this.purchasedate.Location = new System.Drawing.Point(41, 279);
             this.purchasedate.Name = "purchasedate";
             this.purchasedate.Size = new System.Drawing.Size(111, 24);
             this.purchasedate.TabIndex = 13;
@@ -165,17 +167,35 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(158, 241);
+            this.label6.Location = new System.Drawing.Point(158, 282);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 17);
             this.label6.TabIndex = 12;
             this.label6.Text = "بەرواری کڕین";
+            // 
+            // buybox
+            // 
+            this.buybox.Location = new System.Drawing.Point(41, 156);
+            this.buybox.Name = "buybox";
+            this.buybox.Size = new System.Drawing.Size(111, 24);
+            this.buybox.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(158, 159);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(73, 17);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "نرخی کڕین";
             // 
             // EditDataForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(323, 439);
+            this.Controls.Add(this.buybox);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.purchasedate);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.closebtn);
@@ -216,5 +236,7 @@
         private System.Windows.Forms.PictureBox closebtn;
         private System.Windows.Forms.DateTimePicker purchasedate;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox buybox;
+        private System.Windows.Forms.Label label7;
     }
 }

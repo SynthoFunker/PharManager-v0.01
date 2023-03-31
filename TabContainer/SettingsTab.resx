@@ -117,19 +117,152 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>503, 110</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cngbtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cngbtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>349, 206</value>
+  </data>
+  <data name="cngbtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 43</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+  <data name="cngbtn.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>button1</value>
+  <data name="cngbtn.Text" xml:space="preserve">
+    <value>Change Account</value>
+  </data>
+  <data name="&gt;&gt;cngbtn.Name" xml:space="preserve">
+    <value>cngbtn</value>
+  </data>
+  <data name="&gt;&gt;cngbtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cngbtn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cngbtn.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="crtbtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>553, 206</value>
+  </data>
+  <data name="crtbtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 43</value>
+  </data>
+  <data name="crtbtn.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="crtbtn.Text" xml:space="preserve">
+    <value>Create Account</value>
+  </data>
+  <data name="&gt;&gt;crtbtn.Name" xml:space="preserve">
+    <value>crtbtn</value>
+  </data>
+  <data name="&gt;&gt;crtbtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;crtbtn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;crtbtn.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="closebtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFQSURBVFhH7ZbN
+        asJAHMRz6guqTyDoo9S+W3vooR4svfUTCgoiUS/bnWVS1mSmJLClh+YHP5T8dzL5gLDVyEibMJtdhen0
+        JvoaDYV8ia5wbtZ40kJ9khKuWOOJi0reeds31nhEqKis8ahQSVnjUaGSssajQsnd7i7U9TrM559yDjHD
+        mu32Vs6jrPGoUBInBqfTRl4EjmEGDod1Z05Z41GhZF5wPj+FxeKj16wlazwq9G27aLl8H1IOWeNRoQtR
+        eDw+pkL85v8xU5lM1nhUqGN+16DHnTeyxqNCHdUF4HWotS1Z41GhC//0FeR33jx2dUxlKWs8KpT8qWjA
+        RbDGo0LJIR+iun7ozClrPCqUxOcVXzhV3ogZyvf7ezmPssajQiVljUeFSsoajwqVlDWeuAgbSBku4DNr
+        PHHR721KJ5Nr1ni4LcdFlHwS/bflI/+MqvoCrtk7dPpUupAAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="closebtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="closebtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1835, 0</value>
+  </data>
+  <data name="closebtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="closebtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 33</value>
+  </data>
+  <data name="closebtn.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;closebtn.Name" xml:space="preserve">
+    <value>closebtn</value>
+  </data>
+  <data name="&gt;&gt;closebtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;closebtn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;closebtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="minbtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAH0SURBVFhH7Za/
+        SwJhGMdv0qGWFqWhpRYhi0ihkhwiRIxq6C9qK0OICBqCIDIUhMSIpKC4PGmrBi87GoKGLCgoksLz59Pz
+        ykOU56lXlzTcZ3tfH/l+EJ/3eTiDf0X/fNo0HLj0Dyxf39tWb6B37RZ61u/AuvEAXZtP0Ln9AuZwNknl
+        CmyhSsIeKSXo+I3Jozer70Q+nxZyp3SlZNSfWnQE0jC4fA0NBAQqV2ALV8AeKQMdP2HhnqN82sfLMCvI
+        Z3StZMyfyjAB+4rkoitN1BNwHYJl4jAvogBM8bI0J7x300dKUACYAB01UyvgioJlPF4QUQA8x3nJ2yic
+        oafAIIaP7hVFd7wAKCB5D5qEM/QSYOHOWFlEARjfL0juVsIZegkM7ZRFZ6wEKIDh0Fo4Qz+BEjhjRcmh
+        JZyhr0D1FwD6DwDrAtaGM0JO9R3hxpZSvCNwxdNRMyjw2kxgNplTfUcMDAxonjduo+mk/ErlmsFxnjCH
+        snX3hSqtCOBD8uOHiu0TpnBW2/e/zvO2C9TO87YK1JvnbRNQm+dtEWDhavP8zwX6tsCCXSCqzfPfCHQF
+        H90kkKErJThOL6ptGC2mR3bBStefNBPAfSLB9olGa70plF2gciUocIoCZ/Y64QwU4FFAdV9oIpDpCD4v
+        chEwUbnBf4DjPgAgVTKreDz2BgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="minbtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="minbtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1803, 0</value>
+  </data>
+  <data name="minbtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="minbtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="minbtn.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;minbtn.Name" xml:space="preserve">
+    <value>minbtn</value>
+  </data>
+  <data name="&gt;&gt;minbtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;minbtn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;minbtn.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>798, 353</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 43</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="&gt;&gt;button1.Name" xml:space="preserve">
     <value>button1</value>
@@ -141,62 +274,11 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>503, 151</value>
-  </data>
-  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="button2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="button2.Text" xml:space="preserve">
-    <value>button2</value>
-  </data>
-  <data name="&gt;&gt;button2.Name" xml:space="preserve">
-    <value>button2</value>
-  </data>
-  <data name="&gt;&gt;button2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="comboBox1.Items" xml:space="preserve">
-    <value>English</value>
-  </data>
-  <data name="comboBox1.Items1" xml:space="preserve">
-    <value>Kurdish</value>
-  </data>
-  <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>503, 69</value>
-  </data>
-  <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 24</value>
-  </data>
-  <data name="comboBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="comboBox1.Text" xml:space="preserve">
-    <value>Language</value>
-  </data>
-  <data name="&gt;&gt;comboBox1.Name" xml:space="preserve">
-    <value>comboBox1</value>
-  </data>
-  <data name="&gt;&gt;comboBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;comboBox1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -205,6 +287,12 @@
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>1868, 1047</value>
+  </data>
+  <data name="&gt;&gt;bunifuElipse1.Name" xml:space="preserve">
+    <value>bunifuElipse1</value>
+  </data>
+  <data name="&gt;&gt;bunifuElipse1.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuElipse, Bunifu.UI.WinForms.1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>SettingsTab</value>
